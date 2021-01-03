@@ -10,7 +10,7 @@ sudo apt install -y gdb build-essential cmake autoconf libtool libdrm-dev pkg-co
 echo "**************************************"
 echo "*** Building and installing libva  ***"
 echo "**************************************"
-rm -rf ~/vaapi && mkdir ~/vaapi && cd ~/vaapi
+rm -rf ~/vaapi && mkdir ~/vaapi && cp *.* ~/vaapi && cd ~/vaapi
 #wget https://github.com/intel/libva/archive/2.10.0.tar.gz
 tar -xvf 2.10.0.tar.gz
 cd libva-2.10.0/

@@ -17,5 +17,6 @@ mkdir build && cd build
 cmake -DBUILD_TESTS=ON -DBUILD_TOOLS=ON ..
 time make -j$(nproc)
 sudo make -j$(nproc) install
-
+cd ~
+rm -rf ~/vaapi
 
