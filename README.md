@@ -12,3 +12,9 @@ sudo reboot now
 (cd to Intel-MSDK-Ubuntu20-04-Installer directory)
 ./install_msdk2.sh
 ```
+
+## Credits
+
+The UnitX team at Edgeware AB
+
+Maintainer: anders.cedronius(at)edgeware.tv
