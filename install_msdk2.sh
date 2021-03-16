@@ -17,5 +17,7 @@ mkdir build && cd build
 cmake -DBUILD_TESTS=ON -DBUILD_TOOLS=ON ..
 time make -j$(nproc)
 sudo make -j$(nproc) install
+# Copy a helper header used for getting GPU metrics. The corresponding libcttmetrics.so is already located in /opt/intel/mediasdk/share/mfx/samples/
+sudo cp samples/metrics_monitor/include/cttmetrics.h /opt/intel/mediasdk/include/mfx/
 cd $MSDKBASE
 
