@@ -1,4 +1,4 @@
-#Installs Media SDK 20.5.1
+#Installs Media SDK 21.1.3
 
 #!/bin/bash
 set -e
@@ -12,10 +12,10 @@ MSDKBASE=$(pwd)
 echo "**************************************"
 echo "*** Building and installing libva  ***"
 echo "**************************************"
-#wget https://github.com/intel/libva/archive/2.10.0.tar.gz
-rm -rf libva-2.10.0
-tar -xvf 2.10.0.tar.gz
-cd libva-2.10.0/
+#wget https://github.com/intel/libva/archive/refs/tags/2.11.0.tar.gz
+rm -rf libva-2.11.0
+tar -xvf 2.11.0.tar.gz
+cd libva-2.11.0/
 ./autogen.sh --prefix=/usr --libdir=/usr/lib/x86_64-linux-gnu
 time make -j$(nproc)
 sudo make -j$(nproc) install
@@ -25,10 +25,10 @@ echo "********************************************"
 echo "*** Building and installing libva-utils  ***"
 echo "********************************************"
 cd $MSDKBASE
-#wget https://github.com/intel/libva-utils/archive/2.10.0.tar.gz
-rm -rf libva-utils-2.10.0
-tar -xvf tool-2.10.0.tar.gz
-cd libva-utils-2.10.0/
+#wget https://github.com/intel/libva-utils/archive/refs/tags/2.11.1.tar.gz
+rm -rf libva-utils-2.11.1
+tar -xvf 2.11.1.tar.gz
+cd libva-utils-2.11.1/
 ./autogen.sh 
 time make -j$(nproc)
 sudo make -j$(nproc) install
@@ -38,10 +38,10 @@ echo "***************************************"
 echo "*** Building and installing gemlib  ***"
 echo "***************************************"
 cd $MSDKBASE
-#wget https://github.com/intel/gmmlib/archive/intel-gmmlib-20.4.1.tar.gz
-rm -rf gmmlib-intel-gmmlib-20.4.1
-tar -xvf intel-gmmlib-20.4.1.tar.gz
-cd gmmlib-intel-gmmlib-20.4.1/
+#wget https://github.com/intel/gmmlib/archive/refs/tags/intel-gmmlib-21.1.1.tar.gz
+rm -rf gmmlib-intel-gmmlib-21.1.1
+tar -xvf intel-gmmlib-21.1.1.tar.gz
+cd gmmlib-intel-gmmlib-21.1.1/
 mkdir -p build_gmm && cd build_gmm
 cmake -DCMAKE_BUILD_TYPE=Release ..
 time make -j$(nproc)
@@ -52,10 +52,10 @@ echo "*********************************************"
 echo "*** Building and installing media-driver  ***"
 echo "*********************************************"
 cd $MSDKBASE
-#wget https://github.com/intel/media-driver/archive/intel-media-20.4.5.tar.gz
-rm -rf media-driver-intel-media-20.4.5/
-tar -xvf intel-media-20.4.5.tar.gz
-cd media-driver-intel-media-20.4.5/
+#wget https://github.com/intel/media-driver/archive/refs/tags/intel-media-21.1.3.tar.gz
+rm -rf media-driver-intel-media-21.1.3/
+tar -xvf intel-media-21.1.3.tar.gz
+cd media-driver-intel-media-21.1.3/
 mkdir -p build_md && cd build_md
 cmake -DCMAKE_BUILD_TYPE=Release ..
 time make -j$(nproc)
