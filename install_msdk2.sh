@@ -1,4 +1,4 @@
-#Installs Media SDK 20.5.1
+#Installs Media SDK 21.1.3
 
 #!/bin/bash
 set -e
@@ -9,10 +9,10 @@ echo "*** Building and installing Media SDK  ***"
 echo "******************************************"
 MSDKBASE=$(pwd)
 sudo echo #to avoid the break at sudo make install
-#wget https://github.com/Intel-Media-SDK/MediaSDK/archive/intel-mediasdk-20.5.1.tar.gz
-rm -rf MediaSDK-intel-mediasdk-20.5.1/
-tar -xvf intel-mediasdk-20.5.1.tar.gz
-cd MediaSDK-intel-mediasdk-20.5.1/
+#wget https://github.com/Intel-Media-SDK/MediaSDK/archive/refs/tags/intel-mediasdk-21.1.3.tar.gz
+rm -rf MediaSDK-intel-mediasdk-21.1.3/
+tar -xvf intel-mediasdk-21.1.3.tar.gz
+cd MediaSDK-intel-mediasdk-21.1.3/
 mkdir build && cd build
 cmake -DBUILD_TESTS=ON -DBUILD_TOOLS=ON ..
 time make -j$(nproc)
