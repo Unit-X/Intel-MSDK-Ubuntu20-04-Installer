@@ -1,7 +1,7 @@
 ![Logo](qsv.png)
 
 # Intel-MSDK-Ubuntu20-04-Installer
-Installs Intel MSDK (21.1.3) on a Ubuntu 20.04 system.
+Installs Intel MSDK (21.2.3) on a Ubuntu 20.04 system.
 
 [MSDK Releases](https://github.com/Intel-Media-SDK/MediaSDK/releases)
 
